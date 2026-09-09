@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+:root {
+  --primary-color: #232f3e;
+  --accent-color: #ff9900;
+  --bg-color: #f4f4f4;
+}
+
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  width: 100%;
+}
