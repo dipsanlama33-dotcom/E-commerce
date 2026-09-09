@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Commerce</title>
+    <meta name="description" content="ShopEase — everyday gadgets, honestly priced." />
+    <title>ShopEase</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="header-hero.css" />
-    <link rel="stylesheet" href="cart-footer.css" />
     <link rel="stylesheet" href="products.css" />
+    <link rel="stylesheet" href="cart-footer.css" />
   </head>
   <body>
     <header class="navbar">
@@ -16,34 +17,49 @@
       <div class="nav-links">
         <a href="#">Home</a>
         <a href="#">Products</a>
-        <a href="#cart" class="cart-icon"
-          >🛒 Cart (<span id="cart-count">0</span>)</a
-        >
+        <button class="cart-icon" onclick="toggleCart()">
+          🛒 Cart (<span id="cart-count">0</span>)
+        </button>
       </div>
     </header>
 
-    <section class="hero">
-      <h1>Big Sale - Up to 50% Off!</h1>
-      <p>Find the best deals on top quality products today.</p>
-    </section>
-    <section class="products-section">
-      <h2>Featured Products</h2>
-      <div class="product-grid" id="product-container">
-        <!-- Rendered via JavaScript -->
-      </div>
-    </section>
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Everyday gadgets, honestly priced</h1>
+          <p>
+            No flash-sale countdowns, no fake discounts — just solid tech,
+            picked and tested by our team.
+          </p>
+          <a href="#product-container" class="hero-cta">Browse products</a>
+        </div>
+        <div class="hero-spotlight">
+          <img src="https://picsum.photos/seed/spotlight/300/220" alt="Featured product" />
+          <p class="spotlight-price">This week: $29.99</p>
+        </div>
+      </section>
+
+      <section class="products-section">
+        <h2>Featured products</h2>
+        <div class="product-grid" id="product-container">
+          <!-- Rendered via JavaScript -->
+        </div>
+      </section>
+    </main>
+
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+      <h3>Your shopping cart</h3>
+      <div id="cart-items"><p>Cart is empty.</p></div>
+      <div class="cart-total">Total: $<span id="total-price">0.00</span></div>
+      <button class="checkout-btn">Checkout</button>
+    </aside>
 
     <footer>
-      <aside class="cart-drawer" id="cart-drawer">
-        <h3>Your Shopping Cart</h3>
-        <div id="cart-items"><p>Cart is empty.</p></div>
-        <div class="cart-total">Total: $<span id="total-price">0.00</span></div>
-        <button class="checkout-btn">Checkout</button>
-      </aside>
-      <p>2026 ShopEase E-Commerce Project. Built by our team.</p>
+      <p>&copy; 2026 ShopEase E-Commerce Project. Built by our team.</p>
     </footer>
-    <script src="cart.js"></script>
 
+    <script src="cart.js"></script>
     <script src="products.js"></script>
   </body>
 </html>
