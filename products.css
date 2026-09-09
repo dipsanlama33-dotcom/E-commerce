@@ -30,11 +30,14 @@
 
 .product-card img {
   width: 100%;
-  height: 160px;
-  object-fit: cover;
+  height: 200px;
+  object-fit: contain;     /* Forces the full image to be visible without cropping */
+  background-color: #f9f9f9; /* Adds a light neutral background to fill empty spaces */
+  display: block;
   border-radius: 10px;
   margin-bottom: 14px;
 }
+
 
 .product-card h3 {
   font-size: 1.05rem;
